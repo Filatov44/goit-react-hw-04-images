@@ -1,5 +1,6 @@
 import {useEffect} from 'react';
 import { createPortal } from 'react-dom';
+import PropTypes from 'prop-types';
 
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import {
@@ -39,4 +40,9 @@ export default function Modal({onClose, children }) {
     modalRoot
   );
 }
+
+Modal.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  children: PropTypes.object,
+};
 

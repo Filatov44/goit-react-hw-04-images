@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import { StyledGalleryList } from './ImageGallery.styled';
 import { StyledImg, StyledItem } from '../ImageGalleryItem/ImageGalleryItem.styled';
 
@@ -24,3 +25,8 @@ export default function ImageGallery({ pictures, onClick }) {
     </StyledGalleryList>
   );
 }
+
+ImageGallery.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  pictures: PropTypes.array,
+};
